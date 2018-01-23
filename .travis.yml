@@ -6,9 +6,7 @@ dist: trusty
 
 before_install:
   - sudo rm -vf /etc/apt/sources.list.d/*
-  - sudo rm -vf /var/lib/apt/lists/*
-  - sudo apt-get update -qq
-  - sudo apt-get upgrade -y
+  - sudo sed -i 's/us-central1.gce/us-central1.gce.clouds/' /etc/apt/sources.list && sudo apt-get update
   
 notifications:
   email: false
