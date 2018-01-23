@@ -1,3 +1,4 @@
+ /*
  * Copyright (c) 2012, Thingsquare, http://www.thingsquare.com/.
  * All rights reserved.
  *
@@ -27,6 +28,7 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
+
 #ifndef IP64_H
 #define IP64_H
 
