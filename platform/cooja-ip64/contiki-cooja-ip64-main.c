@@ -113,7 +113,11 @@ long referenceVar;
 static struct cooja_mt_thread rtimer_thread;
 static struct cooja_mt_thread process_run_thread;
 
-#define MIN(a, b)   ( (a)<(b) ? (a) : (b) )
+/* #define MIN(a, b)   ( (a)<(b) ? (a) : (b) ) */
+#define MIN(a,b) \
+	({ __typeof__ (a) _a = (a); \
+		__typeof__ (b) _b = (b); \
+		_a < _b ? _a : _b; })
 
 /*---------------------------------------------------------------------------*/
 static void
